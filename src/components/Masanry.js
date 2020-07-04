@@ -5,7 +5,8 @@ import Spinner from "./Spinner";
 
 const MasonryStyled = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: ${(prop) =>
+    prop.loading ? "repeat(1, 1fr)" : "repeat(4, 1fr)"};
   gap: 1rem;
 
   &:hover {
@@ -27,7 +28,7 @@ const MasonryStyled = styled.div`
 
 export default function Masanry({ characters, loading }) {
   return (
-    <MasonryStyled>
+    <MasonryStyled loading={loading}>
       {loading ? (
         <Spinner />
       ) : (
