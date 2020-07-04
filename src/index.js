@@ -1,10 +1,15 @@
 import React from "react";
+import TagManager from "react-gtm-module";
 import { ThemeProvider } from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import ReactDOM from "react-dom";
 import bgimage from "./images/bg.jpg";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+
+const tagManagerArgs = {
+  gtmId: "GTM-PSX9BJV",
+};
 
 const GlobalStyle = createGlobalStyle`
   
@@ -35,6 +40,8 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+TagManager.initialize(tagManagerArgs);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
