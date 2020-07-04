@@ -9,10 +9,12 @@ const MasonryStyled = styled.div`
     prop.loading ? "repeat(1, 1fr)" : "repeat(4, 1fr)"};
   gap: 1rem;
 
-  &:hover {
-    .card-inner {
-      &:not(:hover) {
-        opacity: 0.4;
+  @media (min-width: 992px) {
+    &:hover {
+      .card-inner {
+        &:not(:hover) {
+          opacity: 0.4;
+        }
       }
     }
   }
