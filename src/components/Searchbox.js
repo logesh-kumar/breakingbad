@@ -15,6 +15,8 @@ const SearchBoxStyled = styled.input`
   margin-top: 30px;
   border-radius: 4px;
   padding: 0 4px;
+  font-size: 16px;
+  color: #666;
 `;
 
 export default function Searchbox({ onChange, ...rest }) {
